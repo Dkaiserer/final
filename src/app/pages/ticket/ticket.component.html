@@ -1,0 +1,22 @@
+<div class="main_component">
+    <div class="div-flex">
+        <h1>Jegyfoglalás</h1>
+        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+            <p>
+             <select formControlName="movie">
+                <option [ngValue]="null" disabled>Válaszd ki a megnézni kivánt filmet!</option>
+                <option *ngFor="let movie of movies" [ngValue]="movie.id">{{movie.name}}</option>
+              </select>                         
+            </p>
+            <mat-hint>YYYY/MM/DD</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <input matInput [matDatepicker]="picker">
+            <select formControlName="time">
+                <option [ngValue]="null" disabled>Vetités kezdette</option>
+                <option *ngFor="let time of times" [ngValue]="time.id">{{time.name}}</option>
+              </select>
+            <button type="submit">Jegyfoglalás</button>
+            </form>
+    </div>
+</div>

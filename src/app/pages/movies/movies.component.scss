@@ -1,0 +1,30 @@
+.boss{
+    display: inline-block;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    float: left;
+    width: 50%;
+}
+
+.movieImage{
+    width: 50%;
+    height: auto;
+    border: 5px solid rgb(233, 195, 28);
+
+}
+
+.text{
+    display: flex;
+    float: right;
+    width: 50%;
+}
+
+button{
+    width: 30%;
+    height: 10%;
+    background-color: rgb(233, 195, 28);
+}
